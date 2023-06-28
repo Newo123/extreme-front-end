@@ -1,9 +1,29 @@
 * {
-	box-sizing: border-box;
+	box-sizing: border-box !important;
 	margin: 0;
 	padding: 0;
+	transition: all 0.3s linear;
+}
+
+:root[data-theme='dark'] {
+	--primary: #3e3e3e;
+	--secondary: #e09c0e;
+	--secondary-two: #393939;
+	--text: #ffffff;
+	--border-header: #363636;
+	--logo: url('./images/logo-dark.svg');
+}
+
+:root[data-theme='light'] {
+	--primary: #ffffff;
+	--secondary: #5575e8;
+	--secondary-two: #ffffff;
+	--text: #161616;
+	--border-header: rgba(223, 223, 223, 0.3);
+	--logo: url('./images/black-logo.svg');
 }
 
 body {
 	overflow-x: hidden;
+	background-color: var(--primary);
 }
