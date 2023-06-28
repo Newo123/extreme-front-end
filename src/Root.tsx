@@ -1,11 +1,11 @@
 import { Header } from './components';
 
-function App() {
+const Root = () => {
 	return (
-		<div>
+		<>
 			<Header />
-		</div>
+		</>
 	);
-}
+};
 
-export default App;
+export default Root;
