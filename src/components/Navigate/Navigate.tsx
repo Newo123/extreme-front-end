@@ -1,25 +1,25 @@
-import { IconButton } from '@mui/material';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { FC } from 'react';
 import { ReactComponent as NotifyIcon } from '../../images/bell.svg';
 import { ReactComponent as ChatIcon } from '../../images/chat.svg';
-import { ReactComponent as ProfileIcon } from '../../images/prifileHeader.svg';
 import { ReactComponent as SettingsIcon } from '../../images/settings.svg';
+import styles from './Navigate.module.scss';
 
 export const Navigate: FC = () => {
 	return (
-		<div>
-			<IconButton>
+		<div className={styles.navigate}>
+			<button className={styles.navigate__button}>
 				<ChatIcon />
-			</IconButton>
-			<IconButton>
-				<ProfileIcon />
-			</IconButton>
-			<IconButton>
+			</button>
+			<button className={styles.navigate__button}>
+				<AccountCircleIcon className={styles.profile} />
+			</button>
+			<button className={styles.navigate__button}>
 				<NotifyIcon />
-			</IconButton>
-			<IconButton>
+			</button>
+			<button className={styles.navigate__button}>
 				<SettingsIcon />
-			</IconButton>
+			</button>
 		</div>
 	);
 };

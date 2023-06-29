@@ -8,11 +8,19 @@
 	max-width: 405px;
 	height: 43px;
 
+	@media (max-width: 1024px) {
+		height: 30px;
+		max-width: 250px;
+	}
+
 	&__icon {
 		margin: 12px 20px 12px 15px;
 		fill: var(--secondary);
 		width: 43px;
 		height: 43px;
+		@media (max-width: 1024px) {
+			margin: 12px 10px 12px 5px;
+		}
 	}
 
 	&__input {
@@ -22,6 +30,7 @@
 		border: none;
 		font-size: 14px;
 		background: transparent;
+		color: var(--text);
 	}
 
 	&__input::placeholder {

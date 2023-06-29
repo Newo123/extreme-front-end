@@ -1,8 +1,9 @@
-import { Header } from './components';
+import { Header, HeaderMobile } from './components';
 
 const Root = () => {
 	return (
 		<>
+			<HeaderMobile />
 			<Header />
 		</>
 	);

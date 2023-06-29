@@ -12,7 +12,7 @@ export const Header: FC = () => {
 					<a href='/'></a>
 					<Search />
 				</div>
-				<div>
+				<div className={styles.header__right}>
 					<ToggleTheme />
 					<Navigate />
 				</div>
