@@ -1,0 +1,224 @@
+@import '../../../styles/mixins';
+
+.register {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-areas:
+		'title form'
+		'to form';
+	@include adaptive-hero(margin-top, 108, 29);
+
+	@media (max-width: 768px) {
+		grid-template-areas:
+			'title'
+			'form'
+			'to';
+	}
+
+	&__toLogin {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: 185px;
+		width: 100%;
+		gap: 20px;
+		grid-area: to;
+
+		@media (max-width: 767px) {
+			max-width: 100%;
+		}
+
+		& p {
+			color: var(--text);
+			@include adaptive-hero(font-size, 16, 20);
+			font-weight: 400;
+		}
+
+		& a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include adaptive-hero(padding-top, 12, 15);
+			@include adaptive-hero(padding-bottom, 13, 14);
+			@include adaptive-hero(font-size, 20, 16);
+			font-weight: 400;
+			width: 100%;
+			border-radius: 50px;
+			border: 1px solid var(--secondary);
+			color: var(--secondary);
+			text-decoration: none;
+			background: none;
+
+			&:hover {
+				background: var(--secondary);
+				color: var(--secondary-two);
+			}
+		}
+	}
+
+	&__form {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 20px;
+		max-width: 425px;
+		width: 100%;
+		grid-area: form;
+		position: relative;
+	}
+
+	&__forgotPassword {
+		font-size: 12px;
+		color: var(--secondary);
+		margin-bottom: 20px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&__policy {
+		font-size: 12px;
+		font-weight: 400;
+		color: #7c7c7c;
+
+		& a {
+			color: #7c7c7c;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__submit {
+		@include adaptive-hero(padding-bottom, 13, 14);
+		@include adaptive-hero(padding-top, 12, 15);
+		@include adaptive-hero(font-size, 20, 16);
+		@include adaptive-hero(margin-top, 20, 0);
+		max-width: 277px;
+		width: 100%;
+		background-color: var(--secondary);
+		color: var(--secondary-two);
+		border-radius: 50px;
+
+		&:hover {
+			background-color: var(--button-hover);
+		}
+
+		@media (max-width: 768px) {
+			max-width: 100%;
+		}
+	}
+
+	&__formDescription {
+		position: absolute;
+		right: -60%;
+		font-size: 12px;
+		font-weight: 400;
+		color: #7c7c7c;
+		top: 15%;
+
+		@media (max-width: 1024px) {
+			position: static;
+			margin-bottom: -7px;
+		}
+	}
+
+	&__label {
+		width: 100%;
+
+		@media (max-width: 1024px) {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 5px;
+		}
+	}
+
+	&__input {
+		@include adaptive-hero(padding-bottom, 14, 11);
+		@include adaptive-hero(padding-top, 13, 11);
+		@include adaptive-hero(padding-right, 24, 18.8);
+		@include adaptive-hero(padding-left, 24, 18.8);
+		@include adaptive-hero(border-radius, 40, 20);
+		@include adaptive-hero(font-size, 16, 12);
+		border: 1px solid var(--secondary);
+		width: 100%;
+		background: none;
+		color: var(--text);
+
+		outline: none;
+
+		&::placeholder {
+			color: var(--placeholder);
+		}
+	}
+
+	&__socials {
+		@include adaptive-hero(margin-right, 220, 0);
+		grid-area: title;
+
+		@media (max-width: 768px) {
+			margin-right: 0;
+		}
+	}
+
+	&__title {
+		@include adaptive-hero(font-size, 50, 30);
+		@include adaptive-hero(margin-bottom, 62, 29);
+		font-weight: 500;
+		color: var(--text);
+	}
+
+	&__description {
+		@include adaptive-hero(font-size, 16, 14);
+		margin-bottom: 6px;
+		color: var(--text);
+	}
+
+	&__icons {
+		display: flex;
+		align-items: center;
+		@include adaptive-hero(gap, 15.83, 12.17);
+	}
+}
+
+.vk {
+	display: block;
+	@include adaptive-hero(width, 34, 26);
+	@include adaptive-hero(height, 34, 26);
+	background-image: url('../../../images/vkontakte.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.facebook {
+	display: block;
+	@include adaptive-hero(width, 34, 26);
+	@include adaptive-hero(height, 34, 26);
+	background-image: url('../../../images/facebook.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.yandex {
+	display: block;
+	@include adaptive-hero(width, 34, 26);
+	@include adaptive-hero(height, 34, 26);
+	background-image: url('../../../images/yandex.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.google {
+	display: block;
+	@include adaptive-hero(width, 34, 26);
+	@include adaptive-hero(height, 34, 26);
+	background-image: url('../../../images/google.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}

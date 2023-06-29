@@ -9,7 +9,7 @@ export const Navigate: FC = () => {
 	return (
 		<div className={styles.navigate}>
 			<button className={styles.navigate__button}>
-				<ChatIcon />
+				<ChatIcon className={styles.chat} />
 			</button>
 			<button className={styles.navigate__button}>
 				<AccountCircleIcon className={styles.profile} />

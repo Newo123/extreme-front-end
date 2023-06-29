@@ -32,3 +32,11 @@
 		width: 25px !important;
 	}
 }
+
+.chat {
+	& path {
+		&:nth-child(2) {
+			fill: var(--secondary-two);
+		}
+	}
+}

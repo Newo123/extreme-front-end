@@ -34,6 +34,6 @@
 @mixin adaptive-hero($property, $startSize, $minSize) {
 	$addSize: $startSize - $minSize;
 	#{$property}: calc(
-		#{$minSize + px} + #{$addSize} * ((100vw - 360px) / #{$maxWidth - 360})
+		#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320})
 	);
 }
