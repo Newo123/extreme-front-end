@@ -1,0 +1,188 @@
+@import '../../styles/mixins';
+
+.auth {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-areas:
+		'title form'
+		'to form';
+	@include adaptive-hero(margin-top, 108, 29);
+
+	@media (max-width: 768px) {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'title'
+			'form'
+			'to';
+	}
+
+	&__toRegister {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: 232px;
+		width: 100%;
+		gap: 20px;
+
+		@media (max-width: 767px) {
+			max-width: 100%;
+		}
+
+		& p {
+			color: var(--text);
+			@include adaptive-hero(font-size, 16, 20);
+			font-weight: 400;
+		}
+
+		& a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include adaptive-hero(padding-top, 12, 15);
+			@include adaptive-hero(padding-bottom, 13, 14);
+			@include adaptive-hero(font-size, 20, 16);
+			font-weight: 400;
+			width: 100%;
+			border-radius: 50px;
+			border: 1px solid var(--secondary);
+			color: var(--secondary);
+			text-decoration: none;
+			background: none;
+
+			&:hover {
+				background: var(--secondary);
+				color: var(--secondary-two);
+			}
+		}
+	}
+
+	&__title {
+		@include adaptive-hero(font-size, 50, 30);
+		@include adaptive-hero(margin-bottom, 62, 29);
+		font-weight: 500;
+		color: var(--text);
+	}
+
+	&__description {
+		@include adaptive-hero(font-size, 16, 14);
+		margin-bottom: 6px;
+		color: var(--text);
+	}
+
+	&__icons {
+		display: flex;
+		align-items: center;
+		@include adaptive-hero(gap, 15.83, 12.17);
+	}
+
+	&__loginSocials {
+		@include adaptive-hero(margin-right, 220, 0);
+
+		@media (max-width: 768px) {
+			margin-right: 0;
+			margin-bottom: 36px;
+		}
+	}
+
+	&__registerSocials {
+		@include adaptive-hero(margin-right, 144, 0);
+		grid-area: title;
+
+		@media (max-width: 768px) {
+			margin-right: 0;
+			margin-bottom: 53px;
+		}
+	}
+
+	&__recoverySocials {
+		@include adaptive-hero(margin-right, 54, 0);
+		grid-area: title;
+		max-width: 400px;
+
+		@media (max-width: 768px) {
+			margin-right: 0;
+			margin-bottom: 29px;
+		}
+	}
+
+	&__toLogin {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		max-width: 185px;
+		width: 100%;
+		gap: 20px;
+		grid-area: to;
+
+		@media (max-width: 767px) {
+			max-width: 100%;
+		}
+
+		& p {
+			color: var(--text);
+			@include adaptive-hero(font-size, 16, 20);
+			font-weight: 400;
+		}
+
+		& a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			@include adaptive-hero(padding-top, 12, 15);
+			@include adaptive-hero(padding-bottom, 13, 14);
+			@include adaptive-hero(font-size, 20, 16);
+			font-weight: 400;
+			width: 100%;
+			border-radius: 50px;
+			border: 1px solid var(--secondary);
+			color: var(--secondary);
+			text-decoration: none;
+			background: none;
+
+			&:hover {
+				background: var(--secondary);
+				color: var(--secondary-two);
+			}
+		}
+	}
+}
+
+.vk {
+	display: block;
+	@include adaptive-hero(width, 34, 26);
+	@include adaptive-hero(height, 34, 26);
+	background-image: url('../../images/vkontakte.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.facebook {
+	display: block;
+	@include adaptive-hero(width, 34, 26);
+	@include adaptive-hero(height, 34, 26);
+	background-image: url('../../images/facebook.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.yandex {
+	display: block;
+	@include adaptive-hero(width, 34, 26);
+	@include adaptive-hero(height, 34, 26);
+	background-image: url('../../images/yandex.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.google {
+	display: block;
+	@include adaptive-hero(width, 34, 26);
+	@include adaptive-hero(height, 34, 26);
+	background-image: url('../../images/google.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}

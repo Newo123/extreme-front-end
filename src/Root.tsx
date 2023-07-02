@@ -11,6 +11,7 @@ const Root = () => {
 				<Route path='/' element={<AuthRootPage />} />
 				<Route path='/login' element={<AuthRootPage />} />
 				<Route path='/register' element={<AuthRootPage />} />
+				<Route path='/password-recovery' element={<AuthRootPage />} />
 			</Routes>
 		</>
 	);

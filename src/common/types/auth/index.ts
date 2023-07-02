@@ -1,3 +1,10 @@
+import {
+	FieldErrors,
+	FieldValues,
+	UseFormHandleSubmit,
+	UseFormRegister,
+} from 'react-hook-form';
+
 export interface IAuthState {
 	user: {
 		user: IPublicUser;
@@ -5,6 +12,7 @@ export interface IAuthState {
 	};
 	isLogged: boolean;
 	isLoading: boolean;
+	error: string | null;
 }
 
 export interface IPublicUser {
@@ -27,4 +35,26 @@ export interface IRegisterUser {
 	email: string;
 	password: string;
 	phone: string;
+}
+
+export interface IPropsLoginPage<
+	TFieldValues extends FieldValues = FieldValues,
+	TContext = any,
+> {
+	navigate: (to: string) => void;
+	register: UseFormRegister<TFieldValues>;
+	errors: FieldErrors<TFieldValues>;
+	isLoading: boolean;
+	handleSubmit: UseFormHandleSubmit<TFieldValues, undefined>;
+}
+
+export interface IPropsRegisterPage<
+	TFieldValues extends FieldValues = FieldValues,
+	TContext = any,
+> {
+	navigate: (to: string) => void;
+	register: UseFormRegister<TFieldValues>;
+	errors: FieldErrors<TFieldValues>;
+	isLoading: boolean;
+	handleSubmit: UseFormHandleSubmit<TFieldValues, undefined>;
 }

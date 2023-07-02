@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Navigate } from '../Navigate/Navigate';
 import { Search } from '../Search/Search';
 import { ToggleTheme } from '../ToggleTheme/ToggleTheme';
@@ -6,6 +7,7 @@ import styles from './Header.module.scss';
 
 export const Header: FC = () => {
 	const isAuth = false;
+	const navigate = useNavigate();
 
 	return (
 		<header className={styles.header}>
@@ -19,7 +21,12 @@ export const Header: FC = () => {
 					{isAuth ? (
 						<Navigate />
 					) : (
-						<button className={styles.header__authButton}>Войти</button>
+						<button
+							onClick={() => navigate('/login')}
+							className={styles.header__authButton}
+						>
+							Войти
+						</button>
 					)}
 				</div>
 			</div>
